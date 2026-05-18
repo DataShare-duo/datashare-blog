@@ -11,7 +11,7 @@ draft: false
 
 
 # 背景
-polars学习系列文章，第2篇，上下文与表达式。<br/>
+polars学习系列文章，第2篇，上下文与表达式 <br/>
 该系列文章会分享到github，大家可以去下载jupyter文件
 
 仓库地址：[https://github.com/DataShare-duo/polars_learn](https://github.com/DataShare-duo/polars_learn)
