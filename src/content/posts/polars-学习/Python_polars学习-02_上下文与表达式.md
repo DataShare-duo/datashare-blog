@@ -3,6 +3,7 @@ title: polars学习-02 上下文与表达式
 slug: polars-学习/Python_polars学习-02_上下文与表达式
 published: 2024-04-29
 description: Polars Contexts 上下文 与 Expressions 表达式
+image: ./polars.svg
 tags: [python, polars]
 category: Polars-学习
 draft: false

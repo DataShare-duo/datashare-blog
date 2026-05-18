@@ -3,6 +3,7 @@ title: polars学习-01 读取与写入文件
 slug: polars-学习/Python_polars学习-01_读取与写入文件
 published: 2024-04-24
 description: Polars 数据读取与写入文件
+image: ./polars.svg
 tags: [python, polars]
 category: Polars-学习
 draft: false
