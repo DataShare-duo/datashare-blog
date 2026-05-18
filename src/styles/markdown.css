@@ -1,0 +1,258 @@
+.custom-md {
+    h1 {
+        @apply text-3xl;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        .anchor {
+            @apply transition -m-0.5 ml-[0.2ch] p-0.5 select-none opacity-0 no-underline !important;
+
+            .anchor-icon {
+                @apply mx-[0.45ch] !important;
+            }
+        }
+
+        &:hover {
+            .anchor {
+                @apply opacity-100 !important;
+            }
+        }
+    }
+
+    a:not(.no-styling) {
+        @apply relative bg-none link font-medium text-[#1e6bb8]
+        underline decoration-[#B8B9B8] decoration-1 decoration-dashed underline-offset-4;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+        display: inline-block;
+    
+        &:hover, &:active {
+            @apply decoration-transparent;
+            background: var(--btn-plain-bg-hover);
+            border-bottom: 1px dashed var(--link-hover);
+            text-decoration: none;
+        }
+    }
+
+    code {
+        @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-md overflow-hidden;
+
+        font-family: Consolas;
+        &:before {
+            content:none;
+        }
+        &:after {
+            content:none;
+        }
+
+        counter-reset: line;
+        span.line {
+            &:before {
+                @apply text-white/25 mr-4 w-4 inline-block;
+                content: counter(line);
+                counter-increment: line;
+                direction: rtl;
+            }
+            &:last-child:empty, &:last-child:has(> span:empty:only-child) {
+                display: none;
+            }
+        }
+    }
+
+    .copy-btn {
+        all: initial;
+        @apply btn-regular-dark opacity-0 shadow-lg shadow-black/50 absolute active:scale-90 h-8 w-8 top-3 right-3 text-sm rounded-lg transition-all ease-in-out z-20 cursor-pointer;
+    }
+    .frame:hover .copy-btn {
+        opacity: 1;
+    }
+
+    .copy-btn-icon {
+        @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2 w-4 h-4 fill-white pointer-events-none;
+    }
+    .copy-btn .copy-icon {
+        @apply opacity-100 fill-white dark:fill-white/75;
+    }
+    .copy-btn.success .copy-icon {
+        @apply opacity-0 fill-[var(--deep-text)]
+    }
+    .copy-btn .success-icon {
+        @apply opacity-0 fill-white;
+    }
+    .copy-btn.success .success-icon {
+        @apply opacity-100
+    }
+
+    .expressive-code {
+        @apply my-4;
+        ::selection {
+            @apply bg-[var(--codeblock-selection)];
+        }
+    }
+
+
+    ul, ol {
+        li::marker {
+            @apply text-inherit;
+        }
+    }
+
+    blockquote {
+        @apply not-italic border-transparent relative;
+        font-weight: inherit;
+
+        &:before {
+            @apply content-[''] absolute -left-1 block transition bg-[var(--btn-regular-bg)] h-full w-1 rounded-full;
+        }
+
+        /* Remove the double quotes from default styles */
+        p:before, p:after {
+            @apply content-none;
+        }
+
+    }
+
+    .katex-display-container {
+        max-width: 100%;
+        overflow-x: auto;
+        margin: 1em 0;
+    }
+    
+}
+
+
+
+/* ========== 适配自 blog.css（仅文章页） ========== */
+    
+.custom-md {
+    /* 正文字体、行高 */
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    font-family: "Microsoft YaHei",Arial;
+    
+    /* 段落间距 */
+    p {
+        margin: 20px 5px;
+    }
+
+    /* ── H2-H6 间距 ── */
+    h2, h3, h4, h5, h6 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+
+    /* ── H1：底部橙色线 + <span.heading-text> 橙色标签 ── */
+    h1 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 30px 0 0.9em 0;
+        border-bottom: 2px solid rgb(228, 94, 40);
+        padding-bottom: 0.001em;
+        line-height: 1.8;
+    }
+    /* 标题文字橙色背景标签（rehype 插件包裹的 span） */
+    h1 > .heading-text {
+        display: inline-block;
+        background: rgb(228, 94, 40);
+        color: #ffffff;
+        padding: 3px 10px 1px;
+        border-radius: 3px 3px 0 0;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+    /* 隐藏锚点，仅保留跳转功能 */
+    h1 > .anchor {
+        display: none !important;
+    }
+    
+    h1:after{  /*增加对h1标题后面的修饰*/
+        display: inline-block; 
+        content:" "; 
+        vertical-align: bottom;
+        border-bottom: 36px solid #EFEBE9;
+        border-right: 20px solid transparent;  
+    }
+    
+    
+    
+
+    /* ── 引用块：左边框 + 浅蓝背景 ── */
+    blockquote {
+        padding: 15px 1rem;
+        font-size: 0.9em;
+        margin: 1em 0;
+        border-left: 6px solid #dce6f0;
+        background: #f2f7fb;
+        border-radius: 0 4px 4px 0;
+    }
+    blockquote:before {
+        content: none;
+    }
+    blockquote p {
+        margin: 0;
+    }
+
+    /* ── 分隔线：虚线 ── */
+    hr {
+        height: 1px;
+        margin: 1.5rem 0;
+        border: none;
+        border-top: 1px dashed #A5A5A5;
+    }
+
+    /* ── 行内代码 ── */
+    code {
+        word-wrap: break-word;
+        padding: 2px 4px;
+        border-radius: 4px;
+        margin: 0 2px;
+        color: #C7254E;
+        background: #f8f8f8;
+    }
+
+    /* ── 表格 ── */
+    table {
+        display: table;
+        width: 100%;
+    }
+    table tr {
+        border-top: 1px solid #CCC;
+        background-color: white;
+    }
+    table tr th,
+    table tr td {
+        font-size: 1em;
+        border: 1px solid #CCC;
+        padding: 0.5em 1em;
+    }
+    table tr th {
+        font-weight: bold;
+        background-color: #F0F0F0;
+    }
+}
+
+/* ── 暗色模式适配 ── */
+.dark .custom-md blockquote {
+    border-left-color: #3a3f47;
+    background: #1e2127;
+}
+.dark .custom-md hr {
+    border-top-color: #444;
+}
+.dark .custom-md code {
+    color: #F97583;
+    background: #2d2d2d;
+}
+.dark .custom-md table tr {
+    background-color: transparent;
+}
+.dark .custom-md table tr th,
+.dark .custom-md table tr td {
+    border-color: #3a3f47;
+}
+.dark .custom-md table tr th {
+    background-color: #1e2127;
+}
+
+    
