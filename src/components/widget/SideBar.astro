@@ -20,7 +20,7 @@ const className = Astro.props.class;
         <Categories class="onload-animation" style="animation-delay: 150ms"></Categories>
         <Tag class="onload-animation" style="animation-delay: 200ms"></Tag>
         <div class="onload-animation card-base p-3" style="animation-delay: 250ms">
-        <img src="/favicon/微信公众号.jpg" alt="微信公众号" class="w-full rounded-lg">
+        <img src={`${import.meta.env.BASE_URL}/favicon/微信公众号.jpg`} alt="微信公众号" class="w-full rounded-lg">
         
     </div>
     </div>
