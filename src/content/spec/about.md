@@ -1,6 +1,8 @@
 # 个人简介
 
-笔名：数据人阿多，拥有超过十余年的数据领域工作经验，技术路径从最初的 Excel 数据处理开始，逐步走向基于分布式集群的 Hive 数据开发与分析
+**笔名：数据人阿多**
+
+拥有超过十余年的数据领域工作经验，技术路径从最初的 Excel 数据处理开始，逐步走向基于分布式集群的 Hive 数据开发与分析
 
 
 - **接触的技术范畴也在不断扩展**
@@ -23,5 +25,11 @@
 # 其他平台
 - 微信公众号：DataShare
 - QQ群：581146525
+
+
+<div style="display: flex; gap: 20px; justify-content: center; align-items: center;">
+    <img src="/datashare-blog/favicon/微信公众号.jpg" alt="微信公众号" width="315" height="349">
+    <img src="/datashare-blog/favicon/qq群.jpg" alt="QQ群" width="257" height="457">
+</div>
 
 
