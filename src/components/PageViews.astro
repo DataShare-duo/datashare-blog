@@ -1,54 +1,43 @@
 ---
-// PageViews.astro
-// 一个静态的页面阅读计数器组件，基于 countapi.mileshilliard.com
+// src/components/PageViews.astro
 export interface Props {
-  // 用于标识当前页面的唯一键。如果不传，默认使用当前页面的路径（pathname）。
   key?: string;
 }
 const { key } = Astro.props;
 ---
 
-<span class="page-views" id="page-views">阅读量加载中...</span>
+<span class="page-views" id="page-views">📖 阅读量加载中...</span>
 
-<script>
-  // 将组件的 props 安全地注入到客户端 JavaScript 中
-  const pageKey = `${JSON.stringify(key ?? null)}`;
-
+<script define:vars={{ customKey: key ?? '' }}>
   async function updateViewCount() {
     const element = document.getElementById('page-views');
     if (!element) return;
 
-    // 1. 生成唯一键
-    const resolvedKey = pageKey || window.location.pathname;
+    // 如果传入了自定义 key 就用它，否则用当前页面路径
+    const rawKey = customKey || window.location.pathname;
 
-    // 2. 清理键名：确保它符合 API 对键名的要求（字母、数字、连字符、下划线）
-    const cleanKey = resolvedKey
-      .replace(/^\/+|\/+$/g, '') // 去掉首尾斜杠
-      .replace(/[^a-zA-Z0-9-_/]/g, '-') // 替换非法字符
-      .replace(/\/{2,}/g, '/'); // 合并连续斜杠
+    // 清理键名：字母、数字、短横线、下划线、斜杠
+    const cleanKey = rawKey
+      .replace(/^\/+|\/+$/g, '')
+      .replace(/[^a-zA-Z0-9-_/]/g, '-')
+      .replace(/\/{2,}/g, '/');
 
-    // 3. 构建 API 请求地址
     const apiUrl = `https://countapi.mileshilliard.com/api/v1/hit/${encodeURIComponent(cleanKey)}`;
 
     try {
       const response = await fetch(apiUrl);
-      if (!response.ok) {
-        throw new Error(`API responded with status ${response.status}`);
-      }
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
-      // 从返回数据中提取阅读量
-      if (data && data.value) {
+      if (data?.value) {
         element.textContent = `${data.value} 次`;
       } else {
-        throw new Error('Unexpected response structure');
+        throw new Error('Missing value');
       }
     } catch (error) {
       console.error('Failed to fetch page views:', error);
-      // 出错时优雅降级，避免破坏页面布局
       element.textContent = '0 次';
     }
   }
-  
-  // 页面加载后立即执行计数
+
   updateViewCount();
 </script>
