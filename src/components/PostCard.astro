@@ -8,6 +8,8 @@ import { getDir } from "../utils/url-utils";
 import ImageWrapper from "./misc/ImageWrapper.astro";
 import PostMetadata from "./PostMeta.astro";
 
+import PageViews from './PageViews.astro';
+
 interface Props {
 	class?: string;
 	entry: CollectionEntry<"posts">;
@@ -72,6 +74,10 @@ const { remarkPluginFrontmatter } = await entry.render();
             <div>|</div>
             <div>
                 {remarkPluginFrontmatter.minutes} {" " + i18n(remarkPluginFrontmatter.minutes === 1 ? I18nKey.minuteCount : I18nKey.minutesCount)}
+            </div>
+            <div>|</div>
+            <div>
+                <PageViews />
             </div>
         </div>
 
