@@ -3,41 +3,59 @@
 export interface Props {
   key?: string;
 }
+
+const base = import.meta.env.BASE_URL;
+const rawPath = Astro.url.pathname.startsWith(base)
+  ? Astro.url.pathname.slice(base.length)
+  : Astro.url.pathname;
+
+// 关键：先尝试解码，避免 %E8 之类残留
+let decodedPath;
+try {
+  decodedPath = decodeURIComponent(rawPath);
+} catch {
+  decodedPath = rawPath;
+}
+
+const cleanPath = decodedPath
+  .replace(/^\/+|\/+$/g, '')
+  .replace(/[^a-zA-Z0-9-_/]/g, ''); // 去掉中文等所有非 ASCII 字符
+const defaultKey = `page_${cleanPath || 'home'}`;
+
 const { key } = Astro.props;
+const finalKey = key || defaultKey;
 ---
 
 <span class="page-views" id="page-views">📖 阅读量加载中...</span>
 
-<script define:vars={{ customKey: key ?? '' }}>
-  async function updateViewCount() {
-    const element = document.getElementById('page-views');
-    if (!element) return;
+<script define:vars={{ finalKey }}>
+  const element = document.getElementById('page-views');
 
-    // 如果传入了自定义 key 就用它，否则用当前页面路径
-    const rawKey = customKey || window.location.pathname;
+  async function updateViewCount(el) {
+    if (!el) return;
+    console.log('PageViews key:', finalKey); // 可保留，便于调试
 
-    // 清理键名：字母、数字、短横线、下划线、斜杠
-    const cleanKey = rawKey
-      .replace(/^\/+|\/+$/g, '')
-      .replace(/[^a-zA-Z0-9-_/]/g, '-')
-      .replace(/\/{2,}/g, '/');
-
-    const apiUrl = `https://countapi.mileshilliard.com/api/v1/hit/${encodeURIComponent(cleanKey)}`;
+    const apiUrl = `https://countapi.mileshilliard.com/api/v1/hit/${encodeURIComponent(finalKey)}`;
 
     try {
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const data = await response.json();
       if (data?.value) {
-        element.textContent = `${data.value} 次`;
+        el.textContent = `📖 ${data.value} 次阅读`;
       } else {
         throw new Error('Missing value');
       }
     } catch (error) {
       console.error('Failed to fetch page views:', error);
-      element.textContent = '0 次';
+      el.textContent = '📖 阅读量 N/A';
     }
   }
 
-  updateViewCount();
+  updateViewCount(element);
+
+  document.addEventListener('swup:contentReplaced', () => {
+    const newEl = document.getElementById('page-views');
+    if (newEl) updateViewCount(newEl);
+  });
 </script>
