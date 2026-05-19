@@ -1,103 +1,122 @@
 ---
 // src/components/PageViews.astro
-// 文章阅读次数组件：优先使用远程计数 API，不可达时降级为 localStorage 本地计数
+// 文章阅读次数组件
+// - increment=true（默认）：文章详情页，计数 +1，同一 session 刷新不重复
+// - increment=false：列表页，只展示不增加
 import crypto from 'node:crypto';
 
 interface Props {
   slug?: string;
+  increment?: boolean;
 }
 
-const { slug } = Astro.props;
+const { slug, increment = true } = Astro.props;
 
-// 基于页面路径生成稳定的短哈希 key，避免中文字符被截断导致碰撞
 const rawPath = slug ?? Astro.url.pathname;
 const hash = crypto.createHash('md5').update(rawPath).digest('hex').slice(0, 12);
 const counterKey = `ds_${hash}`;
 ---
 
-<span class="page-views" id="page-views" data-counter-key={counterKey}>
+<span class="page-views" data-counter-key={counterKey} data-increment={String(increment)}>
   阅读量加载中...
 </span>
 
 <script>
   (function () {
-    const el = document.getElementById('page-views');
-    if (!el) return;
-
-    const key = el.dataset.counterKey;
+    const CLASS = 'page-views';
     const API = 'https://countapi.mileshilliard.com/api/v1';
+    const FETCH_TIMEOUT_MS = 5000;
 
-    // 尝试远程 API 获取全局阅读量
-    async function fetchRemoteCount() {
-      const res = await fetch(`${API}/hit/${encodeURIComponent(key)}`);
+    function fetchWithTimeout(url) {
+      const ctrl = new AbortController();
+      const t = setTimeout(() => ctrl.abort(), FETCH_TIMEOUT_MS);
+      return fetch(url, { signal: ctrl.signal }).finally(() => clearTimeout(t));
+    }
+
+    async function fetchHit(key) {
+      const res = await fetchWithTimeout(`${API}/hit/${encodeURIComponent(key)}`);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const data = await res.json();
-      if (data?.value == null) throw new Error('Missing value');
-      return data.value;
+      const d = await res.json();
+      if (d?.value == null) throw new Error('Missing value');
+      return d.value;
     }
 
-    // 本地计数降级方案
-    function getLocalCount() {
-      const stored = localStorage.getItem(key);
-      if (stored) {
-        const count = parseInt(stored, 10) + 1;
-        localStorage.setItem(key, String(count));
-        return count;
-      }
-      localStorage.setItem(key, '1');
-      return 1;
+    async function fetchGet(key) {
+      const res = await fetchWithTimeout(`${API}/get/${encodeURIComponent(key)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const d = await res.json();
+      if (d?.value == null) throw new Error('Missing value');
+      return d.value;
     }
 
-    function display(count) {
+    function show(el, count) {
       el.textContent = ` ${count} 次`;
     }
 
-    async function init() {
+    async function initListView(el, key) {
       try {
-        // 1. 优先尝试远程 API
-        const count = await fetchRemoteCount();
-        display(count);
-        // 缓存全局计数值，供下次离线使用
+        const count = await fetchGet(key);
+        show(el, count);
         localStorage.setItem(`${key}_cache`, String(count));
       } catch {
-        // 2. API 不可达：先用缓存值，无缓存则本地计数
         const cached = localStorage.getItem(`${key}_cache`);
-        if (cached) {
-          display(parseInt(cached, 10));
-        } else {
-          display(getLocalCount());
-        }
+        show(el, cached ? parseInt(cached, 10) : 0);
       }
     }
 
-    init();
-
-    // swup 页面切换后重新初始化（如果项目使用 swup）
-    document.addEventListener('swup:contentReplaced', () => {
-      const newEl = document.getElementById('page-views');
-      if (!newEl) return;
-      const newKey = newEl.dataset.counterKey;
-      if (!newKey) return;
-
-      async function reinit() {
+    async function initDetailView(el, key) {
+      const sessionKey = `hit_${key}`;
+      if (sessionStorage.getItem(sessionKey)) {
         try {
-          const res = await fetch(`${API}/hit/${encodeURIComponent(newKey)}`);
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-          const data = await res.json();
-          if (data?.value != null) {
-            newEl.textContent = ` ${data.value} 次`;
-            localStorage.setItem(`${newKey}_cache`, String(data.value));
-            return;
-          }
+          const count = await fetchGet(key);
+          show(el, count);
+          localStorage.setItem(`${key}_cache`, String(count));
         } catch {
-          const cached = localStorage.getItem(`${newKey}_cache`);
-          newEl.textContent = cached
-            ? ` ${cached} 次`
-            : '0 次';
+          const cached = localStorage.getItem(`${key}_cache`);
+          show(el, cached ? parseInt(cached, 10) : 0);
         }
+        return;
       }
-      reinit();
-    });
+      try {
+        const count = await fetchHit(key);
+        show(el, count);
+        sessionStorage.setItem(sessionKey, '1');
+        localStorage.setItem(`${key}_cache`, String(count));
+      } catch {
+        sessionStorage.setItem(sessionKey, '1');
+        const stored = localStorage.getItem(key);
+        const n = stored ? parseInt(stored, 10) + 1 : 1;
+        localStorage.setItem(key, String(n));
+        show(el, n);
+      }
+    }
+
+    async function initElement(el) {
+      const key = el.dataset.counterKey;
+      if (!key) { el.textContent = ' 0 次'; return; }
+      const inc = el.dataset.increment !== 'false';
+      if (inc) { await initDetailView(el, key); }
+      else     { await initListView(el, key); }
+    }
+
+    async function initAll() {
+      const els = document.querySelectorAll(`.${CLASS}`);
+      if (els.length === 0) return;
+      await Promise.allSettled(Array.from(els).map(initElement));
+    }
+
+    initAll();
+
+    function onSwupNavigate() { initAll(); }
+
+    if (window.swup) {
+      window.swup.hooks.on('page:view', onSwupNavigate);
+    } else {
+      document.addEventListener('swup:enable', () => {
+        window.swup?.hooks.on('page:view', onSwupNavigate);
+        initAll();
+      });
+    }
+    document.addEventListener('swup:contentReplaced', onSwupNavigate);
   })();
 </script>
-
