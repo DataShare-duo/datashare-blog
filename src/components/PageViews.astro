@@ -1,61 +1,103 @@
 ---
 // src/components/PageViews.astro
-export interface Props {
-  key?: string;
+// 文章阅读次数组件：优先使用远程计数 API，不可达时降级为 localStorage 本地计数
+import crypto from 'node:crypto';
+
+interface Props {
+  slug?: string;
 }
 
-const base = import.meta.env.BASE_URL;
-const rawPath = Astro.url.pathname.startsWith(base)
-  ? Astro.url.pathname.slice(base.length)
-  : Astro.url.pathname;
+const { slug } = Astro.props;
 
-// 关键：先尝试解码，避免 %E8 之类残留
-let decodedPath;
-try {
-  decodedPath = decodeURIComponent(rawPath);
-} catch {
-  decodedPath = rawPath;
-}
-
-const cleanPath = decodedPath
-  .replace(/^\/+|\/+$/g, '')
-  .replace(/[^a-zA-Z0-9-_/]/g, ''); // 去掉中文等所有非 ASCII 字符
-const defaultKey = `page_${cleanPath || 'home'}`;
-
-const { key } = Astro.props;
-const finalKey = key || defaultKey;
+// 基于页面路径生成稳定的短哈希 key，避免中文字符被截断导致碰撞
+const rawPath = slug ?? Astro.url.pathname;
+const hash = crypto.createHash('md5').update(rawPath).digest('hex').slice(0, 12);
+const counterKey = `ds_${hash}`;
 ---
 
-<span class="page-views" id="page-views">📖 阅读量加载中...</span>
+<span class="page-views" id="page-views" data-counter-key={counterKey}>
+  阅读量加载中...
+</span>
 
-<script define:vars={{ finalKey }}>
-  const element = document.getElementById('page-views');
-
-  async function updateViewCount(el) {
+<script>
+  (function () {
+    const el = document.getElementById('page-views');
     if (!el) return;
-    console.log('PageViews key:', finalKey); // 可保留，便于调试
 
-    const apiUrl = `https://countapi.mileshilliard.com/api/v1/hit/${encodeURIComponent(finalKey)}`;
+    const key = el.dataset.counterKey;
+    const API = 'https://countapi.mileshilliard.com/api/v1';
 
-    try {
-      const response = await fetch(apiUrl);
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const data = await response.json();
-      if (data?.value) {
-        el.textContent = `📖 ${data.value} 次阅读`;
-      } else {
-        throw new Error('Missing value');
-      }
-    } catch (error) {
-      console.error('Failed to fetch page views:', error);
-      el.textContent = '📖 阅读量 N/A';
+    // 尝试远程 API 获取全局阅读量
+    async function fetchRemoteCount() {
+      const res = await fetch(`${API}/hit/${encodeURIComponent(key)}`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (data?.value == null) throw new Error('Missing value');
+      return data.value;
     }
-  }
 
-  updateViewCount(element);
+    // 本地计数降级方案
+    function getLocalCount() {
+      const stored = localStorage.getItem(key);
+      if (stored) {
+        const count = parseInt(stored, 10) + 1;
+        localStorage.setItem(key, String(count));
+        return count;
+      }
+      localStorage.setItem(key, '1');
+      return 1;
+    }
 
-  document.addEventListener('swup:contentReplaced', () => {
-    const newEl = document.getElementById('page-views');
-    if (newEl) updateViewCount(newEl);
-  });
+    function display(count) {
+      el.textContent = ` ${count} 次`;
+    }
+
+    async function init() {
+      try {
+        // 1. 优先尝试远程 API
+        const count = await fetchRemoteCount();
+        display(count);
+        // 缓存全局计数值，供下次离线使用
+        localStorage.setItem(`${key}_cache`, String(count));
+      } catch {
+        // 2. API 不可达：先用缓存值，无缓存则本地计数
+        const cached = localStorage.getItem(`${key}_cache`);
+        if (cached) {
+          display(parseInt(cached, 10));
+        } else {
+          display(getLocalCount());
+        }
+      }
+    }
+
+    init();
+
+    // swup 页面切换后重新初始化（如果项目使用 swup）
+    document.addEventListener('swup:contentReplaced', () => {
+      const newEl = document.getElementById('page-views');
+      if (!newEl) return;
+      const newKey = newEl.dataset.counterKey;
+      if (!newKey) return;
+
+      async function reinit() {
+        try {
+          const res = await fetch(`${API}/hit/${encodeURIComponent(newKey)}`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          if (data?.value != null) {
+            newEl.textContent = ` ${data.value} 次`;
+            localStorage.setItem(`${newKey}_cache`, String(data.value));
+            return;
+          }
+        } catch {
+          const cached = localStorage.getItem(`${newKey}_cache`);
+          newEl.textContent = cached
+            ? ` ${cached} 次`
+            : '0 次';
+        }
+      }
+      reinit();
+    });
+  })();
 </script>
+
