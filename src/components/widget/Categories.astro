@@ -1,16 +1,13 @@
 ---
 import I18nKey from "../../i18n/i18nKey";
 import { i18n } from "../../i18n/translation";
-import { getCategoryList } from "../../utils/content-utils";
-import ButtonLink from "../control/ButtonLink.astro";
+import { buildCategoryTree, getCategoryList } from "../../utils/content-utils";
 import WidgetLayout from "./WidgetLayout.astro";
 
-const categories = await getCategoryList();
+const flatCategories = await getCategoryList();
+const categories = buildCategoryTree(flatCategories);
 
-const COLLAPSED_HEIGHT = "7.5rem";
-const COLLAPSE_THRESHOLD = 5;
-
-const isCollapsed = categories.length >= COLLAPSE_THRESHOLD;
+const isCollapsed = false;
 
 interface Props {
 	class?: string;
@@ -20,16 +17,85 @@ const className = Astro.props.class;
 const style = Astro.props.style;
 ---
 
-<WidgetLayout name={i18n(I18nKey.categories)} id="categories" isCollapsed={isCollapsed} collapsedHeight={COLLAPSED_HEIGHT}
+<WidgetLayout name={i18n(I18nKey.categories)} id="categories" isCollapsed={isCollapsed} collapsedHeight="0"
                 class={className} style={style}
 >
-    {categories.map((c) =>
-        <ButtonLink
-            url={c.url}
-            badge={String(c.count)}
-            label={`View all posts in the ${c.name.trim()} category`}
-        >
-            {c.name.trim()}
-        </ButtonLink>
-    )}
+    {categories.map((cat) => (
+        cat.children.length > 0 ? (
+            <details class="cat-group">
+                <summary class="cat-row cat-row--parent">
+                    <span class="cat-arrow">▶</span>
+                    <a href={cat.url} class="cat-label">{cat.name}</a>
+                    <span class="cat-badge">{cat.totalCount}</span>
+                </summary>
+                <div class="cat-children">
+                    {cat.children.map((child) => (
+                        <a href={child.url} class="cat-row cat-row--child">
+                            <span class="cat-name">{child.name}</span>
+                            <span class="cat-badge">{child.totalCount}</span>
+                        </a>
+                    ))}
+                </div>
+            </details>
+        ) : (
+            <a href={cat.url} class="cat-row cat-row--leaf">
+                <span class="cat-name">{cat.name}</span>
+                <span class="cat-badge">{cat.totalCount}</span>
+            </a>
+        )
+    ))}
 </WidgetLayout>
+
+<style>
+    .cat-row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+        border-radius: 0.4rem;
+        transition: background 0.15s, color 0.15s;
+        text-decoration: none;
+        color: var(--text-75);
+        box-sizing: border-box;
+    }
+    .cat-row:hover { background: var(--btn-plain-bg-hover); color: var(--primary); }
+    .cat-row--parent {
+        cursor: pointer;
+        list-style: none;
+        padding-left: 0.25rem;
+    }
+    .cat-row--parent::-webkit-details-marker { display: none; }
+    .cat-row--leaf { padding-left: 1.1rem; }
+    .cat-arrow {
+        font-size: 0.55rem;
+        width: 0.75rem;
+        flex-shrink: 0;
+        text-align: center;
+        color: var(--primary);
+        transition: transform 0.2s;
+        margin-right: 0.1rem;
+    }
+    details[open] > .cat-row--parent .cat-arrow {
+        transform: rotate(90deg);
+    }
+    .cat-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cat-label { text-decoration: none; color: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .cat-children {
+        margin-left: 0.375rem;
+        padding-left: 0.5rem;
+        border-left: 1.5px dashed var(--primary);
+    }
+    .cat-badge {
+        flex-shrink: 0;
+        margin-left: auto;
+        font-size: 0.875rem;
+        font-weight: 600;
+        background: var(--btn-regular-bg);
+        color: var(--btn-content);
+        padding: 0.05rem 0.45rem;
+        border-radius: 0.35rem;
+        min-width: 1.5rem;
+        text-align: center;
+    }
+    .dark .cat-badge { background: var(--primary); color: var(--deep-text); }
+</style>

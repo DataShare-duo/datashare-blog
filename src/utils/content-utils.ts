@@ -72,13 +72,15 @@ export async function getTagList(): Promise<Tag[]> {
 	return keys.map((key) => ({ name: key, count: countMap[key] }));
 }
 
-export type Category = {
+export type CategoryNode = {
 	name: string;
 	count: number;
+	totalCount: number;
 	url: string;
+	children: CategoryNode[];
 };
 
-export async function getCategoryList(): Promise<Category[]> {
+export async function getCategoryList(): Promise<CategoryNode[]> {
 	const allBlogPosts = await getCollection<"posts">("posts", ({ data }) => {
 		return import.meta.env.PROD ? data.draft !== true : true;
 	});
@@ -99,16 +101,77 @@ export async function getCategoryList(): Promise<Category[]> {
 	});
 
 	const lst = Object.keys(count).sort((a, b) => {
-		return a.toLowerCase().localeCompare(b.toLowerCase());
+		return count[b] - count[a];
 	});
 
-	const ret: Category[] = [];
+	const ret: CategoryNode[] = [];
 	for (const c of lst) {
 		ret.push({
 			name: c,
 			count: count[c],
+			totalCount: count[c],
 			url: getCategoryUrl(c),
+			children: [],
 		});
 	}
 	return ret;
+}
+
+export function buildCategoryTree(flat: CategoryNode[]): CategoryNode[] {
+	interface TreeNode {
+		name: string;
+		fullPath: string;
+		count: number;
+		totalCount: number;
+		children: Map<string, TreeNode>;
+	}
+
+	const root: Map<string, TreeNode> = new Map();
+
+	for (const cat of flat) {
+		const parts = cat.name.split("/");
+		let currentMap = root;
+
+		for (let i = 0; i < parts.length; i++) {
+			const part = parts[i];
+			const isLeaf = i === parts.length - 1;
+
+			if (!currentMap.has(part)) {
+				currentMap.set(part, {
+					name: part,
+					fullPath: parts.slice(0, i + 1).join("/"),
+					count: 0,
+					totalCount: 0,
+					children: new Map(),
+				});
+			}
+
+			const node = currentMap.get(part)!;
+			node.totalCount += cat.totalCount;
+			if (isLeaf) {
+				node.count = cat.count;
+			}
+
+			currentMap = node.children;
+		}
+	}
+
+	function toArray(map: Map<string, TreeNode>): CategoryNode[] {
+		const arr: CategoryNode[] = [];
+		for (const node of map.values()) {
+			const children = toArray(node.children);
+			children.sort((a, b) => b.totalCount - a.totalCount);
+			arr.push({
+				name: node.name,
+				count: node.count,
+				totalCount: node.totalCount,
+				url: getCategoryUrl(node.fullPath),
+				children,
+			});
+		}
+		arr.sort((a, b) => b.totalCount - a.totalCount);
+		return arr;
+	}
+
+	return toArray(root);
 }
