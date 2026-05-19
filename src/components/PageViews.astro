@@ -66,6 +66,7 @@ const counterKey = `ds_${hash}`;
 
     async function initDetailView(el, key) {
       const sessionKey = `hit_${key}`;
+
       if (sessionStorage.getItem(sessionKey)) {
         try {
           const count = await fetchGet(key);
@@ -77,13 +78,14 @@ const counterKey = `ds_${hash}`;
         }
         return;
       }
+
+      sessionStorage.setItem(sessionKey, '1');
+
       try {
         const count = await fetchHit(key);
         show(el, count);
-        sessionStorage.setItem(sessionKey, '1');
         localStorage.setItem(`${key}_cache`, String(count));
       } catch {
-        sessionStorage.setItem(sessionKey, '1');
         const stored = localStorage.getItem(key);
         const n = stored ? parseInt(stored, 10) + 1 : 1;
         localStorage.setItem(key, String(n));
