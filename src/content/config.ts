@@ -8,6 +8,7 @@ const postsCollection = defineCollection({
 		draft: z.boolean().optional().default(false),
 		description: z.string().optional().default(""),
 		image: z.string().optional().default(""),
+        showCoverInPost: z.boolean().optional().default(true), // 必须添加
 		tags: z.array(z.string()).optional().default([]),
 		category: z.string().optional().nullable().default(""),
 		lang: z.string().optional().default(""),
