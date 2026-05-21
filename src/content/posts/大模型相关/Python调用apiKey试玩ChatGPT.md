@@ -1,9 +1,8 @@
 ---
 title: Python调用apiKey试玩ChatGPT
-slug: NLP/Python调用apiKey试玩ChatGPT
+slug: 大模型相关/Python调用apiKey试玩ChatGPT
 published: 2023-02-18
 description: Python 试玩ChatGPT
-image: ./python.jpg
 showCoverInPost: false
 tags: [python, ChatGPT, 大模型]
 category: 大模型相关
