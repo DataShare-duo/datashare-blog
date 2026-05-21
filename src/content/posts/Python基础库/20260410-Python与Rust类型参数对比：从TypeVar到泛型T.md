@@ -5,7 +5,7 @@ published: 2026-04-10
 description: Python与Rust类型参数对比
 image: ./python.jpg
 showCoverInPost: false
-tags: [python,rust]
+tags: [python,rust,类型]
 category: Python/Python基础库
 draft: false
 ---
