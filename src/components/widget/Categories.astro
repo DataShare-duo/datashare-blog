@@ -75,16 +75,40 @@ const style = Astro.props.style;
         transition: transform 0.2s;
         margin-right: 0.1rem;
     }
+    
+    
+    /* 原有 cat-row--child 新增样式覆盖 */
+    .cat-row--child {
+        padding-left: 0;                      /* 取消左侧内边距，避免双倍缩进 */
+    }
+    
+    /* 横向虚线连接垂直虚线 */
+    .cat-row--child::before {
+        content: '';
+        display: inline-block;
+        width: 1.25rem;                       /* 短虚线长度，可自行调整 */
+        border-bottom: 1.5px dashed var(--primary);  /* 与垂直虚线同色同粗细 */
+        margin-right: 0.5rem;
+        margin-left: -1rem;                   /* 向左拉 1rem，补偿 cat-children 的 padding-left */
+        vertical-align: middle;
+    }
+    
     details[open] > .cat-row--parent .cat-arrow {
         transform: rotate(90deg);
     }
     .cat-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .cat-label { text-decoration: none; color: inherit; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    
+    /* 原有 cat-children 修改 */
     .cat-children {
-        margin-left: 0.375rem;
-        padding-left: 0.5rem;
+        margin-left: 0.675rem;
+        padding-left: 1rem;                    /* 改为 1rem，提供充足缩进 */
         border-left: 1.5px dashed var(--primary);
+        height: fit-content;      /* 高度由内容撑开，不预留多余空间 */
+        padding-bottom: 0;        /* 确保底部没有内边距 */
     }
+    
+    
     .cat-badge {
         flex-shrink: 0;
         margin-left: auto;
