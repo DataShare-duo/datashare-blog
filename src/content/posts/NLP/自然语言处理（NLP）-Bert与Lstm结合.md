@@ -3,7 +3,7 @@ title: 自然语言处理（NLP）-Bert与LSTM结合
 slug: NLP/自然语言处理（NLP）-Bert与Lstm结合
 published: 2020-09-08
 description: Python 自然语言处理
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, NLP]
 category: Python/NLP
