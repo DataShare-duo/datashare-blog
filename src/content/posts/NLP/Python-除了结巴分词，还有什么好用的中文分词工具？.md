@@ -3,7 +3,7 @@ title: Python 除了结巴分词，还有什么好用的中文分词工具？
 slug: NLP/Python-除了结巴分词，还有什么好用的中文分词工具？
 published: 2021-05-15
 description: Python 中文分词工具
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, NLP, 工具]
 category: Python/NLP
