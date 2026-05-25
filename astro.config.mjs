@@ -157,6 +157,9 @@ export default defineConfig({
 		],
 	},
 	vite: {
+        // 将 .xlsx 文件作为静态资源，避免 Vite 尝试解析其 JS 语法
+        assetsInclude: ['**/*.xlsx'],
+        
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
