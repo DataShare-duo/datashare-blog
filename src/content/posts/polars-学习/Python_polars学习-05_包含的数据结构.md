@@ -5,7 +5,7 @@ published: 2024-06-14
 description: Polars 包含的数据结构是：Series、DataFrame
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

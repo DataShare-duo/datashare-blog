@@ -5,7 +5,7 @@ published: 2024-04-24
 description: Polars 数据读取与写入文件
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

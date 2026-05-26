@@ -5,7 +5,7 @@ published: 2024-06-20
 description: Polars Lazy（延迟、惰性）、Eager（即时、实时）计算引擎
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

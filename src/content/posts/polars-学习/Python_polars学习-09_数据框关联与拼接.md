@@ -5,7 +5,7 @@ published: 2024-07-23
 description: Polars 数据框关联与拼接（Join 、Concat）
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

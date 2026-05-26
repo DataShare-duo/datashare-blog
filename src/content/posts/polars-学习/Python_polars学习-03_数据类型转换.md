@@ -5,7 +5,7 @@ published: 2024-05-13
 description: Polars 数据类型转换
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

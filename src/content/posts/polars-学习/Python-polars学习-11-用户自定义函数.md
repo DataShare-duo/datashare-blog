@@ -5,7 +5,7 @@ published: 2026-01-26
 description: Polars python 自定义函数如何与 polars 结合使用
 image: ./polars.svg
 tags: [python, polars]
-category: Polars-学习
+category: Python/Polars-学习
 draft: false
 ---
 

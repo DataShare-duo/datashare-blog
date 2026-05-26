@@ -106,7 +106,7 @@ export default defineConfig({
 	],
 	markdown: {
 		remarkPlugins: [
-			remarkMath,
+			//remarkMath,
 			remarkReadingTime,
 			remarkExcerpt,
 			remarkGithubAdmonitionsToDirectives,
@@ -115,7 +115,7 @@ export default defineConfig({
 			parseDirectiveNode,
 		],
 		rehypePlugins: [
-			rehypeKatex,
+			//rehypeKatex,
 			rehypeSlug,
 			[
 				rehypeComponents,

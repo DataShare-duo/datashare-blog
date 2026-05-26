@@ -18,7 +18,7 @@ import {
 import { defaultFavicons } from "../constants/icon";
 import type { Favicon } from "../types/config";
 import { pathsEqual, url } from "../utils/url-utils";
-import "katex/dist/katex.css";
+//import "katex/dist/katex.css";
 
 interface Props {
 	title?: string;
@@ -108,7 +108,9 @@ const bannerOffset =
 				  media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}
 			/>
 		))}
-
+        
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+        
 		<!-- Set the theme before the page is rendered to avoid a flash -->
 		<script is:inline define:vars={{DEFAULT_THEME, LIGHT_MODE, DARK_MODE, AUTO_MODE, BANNER_HEIGHT_EXTEND, PAGE_WIDTH, configHue}}>
 			// Load the theme from local storage
@@ -146,7 +148,45 @@ const bannerOffset =
 		<slot name="head"></slot>
 
 		<link rel="alternate" type="application/rss+xml" title={profileConfig.name} href={`${Astro.site}rss.xml`}/>
-
+        
+        
+        <!-- 放在 <head> 里 -->
+        <script data-swup-ignore>
+          window.MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$'], ['\\[', '\\]']],
+            },
+            options: {
+              skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            },
+          };
+        </script>
+        
+        <script
+          id="MathJax-script"
+          async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+          data-swup-ignore
+        ></script>
+        
+        <script data-swup-ignore>
+            // 等待 MathJax 加载完成
+            function typesetMath() {
+                if (window.MathJax && MathJax.typesetPromise) {
+                  // 限定在 swup 的容器内重新排版，性能更好
+                  const container = document.querySelector('main') || document.body;
+                  MathJax.typesetPromise([container]).catch(console.error);
+                }
+            }
+            
+            // swup 页面切换后重新渲染公式
+            document.addEventListener('swup:contentReplaced', typesetMath);
+            
+        </script>
+        
+        
+        
 	</head>
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
