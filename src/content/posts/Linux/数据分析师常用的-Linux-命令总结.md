@@ -157,8 +157,10 @@ draft: false
 - [https://www.runoob.com/linux/linux-tutorial.html](https://www.runoob.com/linux/linux-tutorial.html)
 
 # 历史相关文章
-- [Linux之NTFS、FAT32、exFAT 各种格式硬盘挂载整理](./Linux之NTFS、FAT32、exFAT-各种格式硬盘挂载整理.md)
-- [Linux （Centos 7）中 Anaconda环境管理，安装不同的版本Python包](./Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包.md)
+- [Linux之NTFS、FAT32、exFAT-各种格式硬盘挂载整理](../../Linux/Linux之NTFS、FAT32、exFAT-各种格式硬盘挂载整理/)
+- [Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包](../../Linux/Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

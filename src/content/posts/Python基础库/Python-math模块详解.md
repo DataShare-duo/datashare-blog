@@ -3,7 +3,7 @@ title: Python math模块详解
 slug: Python基础库/Python-math模块详解
 published: 2020-08-30
 description: Python math基础库
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库]
 category: Python/Python基础库
@@ -186,8 +186,8 @@ import math
 *度数、弧度概念可参考历史相关文章，有详细说明*
 
 # 历史相关文章
-- [利用Python计算两个地理位置之间的中点](../Python数据处理/利用Python计算两个地理位置之间的中点.md)
-- [Python Numpy中的范数](../Python数据处理/Python--Numpy中的范数.md)
+- [利用Python计算两个地理位置之间的中点](../../Python数据处理/利用Python计算两个地理位置之间的中点/)
+- [Python Numpy中的范数](../../Python数据处理/Python--Numpy中的范数/)
 
 ------
 

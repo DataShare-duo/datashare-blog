@@ -3,7 +3,7 @@ title: 《Python-编程从新手到高手》知识点
 slug: Python基础库/《Python-编程从新手到高手》知识点
 published: 2025-12-23
 description: Python 编程从新手到高手知识点
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python]
 category: Python/Python基础库
@@ -60,9 +60,10 @@ def inform(cls, codeword):
 **重点是记住这2个英文单词，比如在hive sql中，任务在集群中运行，可以启动并行，`set hive.exec.parallel=true;`，中文翻译有时会忽略两者差异**
 
 # 历史相关文章
-- [Python-函数参数类型与使用规则详解](/Python基础库/Python-函数参数类型与使用规则详解.md)
-- [Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力](/Python基础库/Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力.md)
-- [Python-标准库之pathlib（二），路径操作](/Python基础库/Python-标准库之pathlib（二），路径操作.md)
+- [Python 函数参数类型与使用规则详解](../../Python基础库/Python-函数参数类型与使用规则详解/)
+- [Python 3.14 无GIL解释器性能测试：释放多核CPU的并行潜力](../../Python基础库/Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力/)
+- [Python 标准库之pathlib（二），路径操作](../../Python基础库/Python-标准库之pathlib（二），路径操作/)
+
 
 
 **************************************************************************

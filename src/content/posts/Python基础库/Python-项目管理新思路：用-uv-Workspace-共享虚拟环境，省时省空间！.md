@@ -3,7 +3,7 @@ title: Python 项目管理新思路：用 uv Workspace 共享虚拟环境，省�
 slug: Python基础库/Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！
 published: 2025-07-29
 description: Python uv项目管理
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, uv]
 category: Python/Python基础库
@@ -164,9 +164,11 @@ uv run .\main.py
 ```
 
 # 历史相关文章
-- [Python-新晋包项目工具uv的简单尝试](/Python基础库/Python-新晋包项目工具uv的简单尝试.md)
-- [Python-在指定文件夹安装三方库，并进行加载使用](/Python基础库/Python-在指定文件夹安装三方库，并进行加载使用.md)
-- [Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？](/Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？.md)
+- [Python 新晋包项目工具uv的简单尝试](../../Python基础库/Python-新晋包项目工具uv的简单尝试/)
+- [Python 在指定文件夹安装三方库，并进行加载使用](../../Python基础库/Python-在指定文件夹安装三方库，并进行加载使用/)
+- [Rust 是否会重写 Python 解释器与有关的库，替代 C 语言地位？](../../Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

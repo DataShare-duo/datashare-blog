@@ -3,7 +3,7 @@ title: Python 标准库之pathlib（二），路径操作
 slug: Python基础库/Python-标准库之pathlib（二），路径操作
 published: 2025-10-15
 description: Python pathlib基础库
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库]
 category: Python/Python基础库
@@ -100,9 +100,10 @@ if not path.exists():
 
 
 # 历史相关文章
-- [Python-标准库之pathlib，路径操作](/Python基础库/Python-标准库之pathlib，路径操作.md)
-- [Python-collections详解：解锁高效数据结构](/Python基础库/Python-collections详解：解锁高效数据结构.md)
-- [Python利用partial偏函数，生成不同的聚合函数](/Python基础库/Python利用partial偏函数，生成不同的聚合函数.md)
+- [Python 标准库之pathlib，路径操作](../../Python基础库/Python-标准库之pathlib，路径操作/)
+- [Python collections详解：解锁高效数据结构](../../Python基础库/Python-collections详解：解锁高效数据结构/)
+- [Python利用partial偏函数，生成不同的聚合函数](../../Python基础库/Python利用partial偏函数，生成不同的聚合函数/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

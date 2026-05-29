@@ -50,9 +50,10 @@ create function generateSeries_dt as (start_dt,end_dt) ->
 通过上面的详细解释，感觉是不是和python很像，经过测试，其性能大概是java编写的自定义函数性能100倍
 
 # 历史相关文章
-- [Python-基于pyhive库操作hive](/Python数据处理/Python-基于pyhive库操作hive.md)
-- [Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？](/Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？.md)
-- [Python中的Lambda匿名函数](/Python数据处理/Python中的Lambda匿名函数.md)
+- [Python 基于pyhive库操作hive](../../Python数据处理/Python-基于pyhive库操作hive/)
+- [Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？](../../Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？/)
+- [Python中的Lambda匿名函数](../../Python数据处理/Python中的Lambda匿名函数/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

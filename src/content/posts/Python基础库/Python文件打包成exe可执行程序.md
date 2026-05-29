@@ -3,7 +3,7 @@ title: Python文件打包成exe可执行程序
 slug: Python基础库/Python文件打包成exe可执行程序
 published: 2020-10-19
 description: Python 打包程序
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 打包]
 category: Python/Python基础库
@@ -55,7 +55,9 @@ python xxx.py
 ***亲测自己的打包程序从200M降到50M大小***
 
 # 历史相关文章
-- [Python常用语句汇总](../Python数据处理/Python常用语句汇总.md)
-- [Linux （Centos 7）中 Anaconda环境管理，安装不同的版本Python包](../Linux/Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包.md)
+- [Python 常用语句汇总](../../Python数据处理/Python常用语句汇总/)
+- [Linux-（Centos-7）中 Anaconda环境管理，安装不同的版本Python包](../../Linux/Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包/)
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号DataShare，不定期分享干货**

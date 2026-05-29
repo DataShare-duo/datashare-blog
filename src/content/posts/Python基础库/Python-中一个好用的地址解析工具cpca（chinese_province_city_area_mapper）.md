@@ -3,7 +3,7 @@ title: Python 中一个好用的地址解析工具cpca（chinese_province_city_a
 slug: Python基础库/Python-中一个好用的地址解析工具cpca（chinese_province_city_area_mapper）
 published: 2022-02-16
 description: Python 地址解析工具
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 工具]
 category: Python/Python基础库
@@ -74,8 +74,10 @@ df.loc[0,"市"]
 **全国行政区划查询平台：** http://xzqh.mca.gov.cn/map
 
 # 历史相关文章
-- [Python 基于pyecharts自定义经纬度热力图可视化](../数据可视化/Python-基于pyecharts自定义经纬度热力图可视化.md)
-- [利用Python计算两个地理位置之间的中点](../Python数据处理/利用Python计算两个地理位置之间的中点.md)
+- [Python 基于pyecharts自定义经纬度热力图可视化](../../数据可视化/Python-基于pyecharts自定义经纬度热力图可视化/)
+- [利用Python计算两个地理位置之间的中点](../../Python数据处理/利用Python计算两个地理位置之间的中点/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

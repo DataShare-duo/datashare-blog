@@ -3,7 +3,7 @@ title: Python 2个好用的装饰器函数
 slug: Python基础库/Python-2个好用的装饰器函数
 published: 2025-07-22
 description: Python 装饰器函数
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python,装饰器]
 category: Python/Python基础库
@@ -122,9 +122,10 @@ if __name__=='__main__':
 ![测试](./images/6641583-f164297b19a935be.png)
 
 # 历史相关文章
-- [Python中的Lambda匿名函数](/Python数据处理/Python中的Lambda匿名函数.md)
-- [Python利用partial偏函数，生成不同的聚合函数](/Python基础库/Python利用partial偏函数，生成不同的聚合函数.md)
-- [Python-内建模块-bisect，数组二分查找算法](/Python基础库/Python-内建模块-bisect，数组二分查找算法.md)
+- [Python中的Lambda匿名函数](../../Python数据处理/Python中的Lambda匿名函数/)
+- [Python利用partial偏函数，生成不同的聚合函数](../../Python基础库/Python利用partial偏函数，生成不同的聚合函数/)
+- [Python 内建模块 bisect，数组二分查找算法](../../Python基础库/Python-内建模块-bisect，数组二分查找算法/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

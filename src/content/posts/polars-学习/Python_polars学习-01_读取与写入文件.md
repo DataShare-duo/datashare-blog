@@ -3,7 +3,7 @@ title: polars学习-01 读取与写入文件
 slug: polars-学习/Python_polars学习-01_读取与写入文件
 published: 2024-04-24
 description: Polars 数据读取与写入文件
-image: ./polars.svg
+image: /polars.svg
 tags: [python, polars]
 category: Python/Polars-学习
 draft: false
@@ -84,9 +84,10 @@ data_csv.write_excel('./data/data_write.xlsx',float_precision=1)
 ```
 
 # 历史相关文章
-- [Python pandas遍历行数据的2种方法](../Python数据处理/Python-pandas遍历行数据的2种方法.md)
-- [Python 利用pandas对数据进行特定排序](../Python数据处理/Python-利用pandas对数据进行特定排序.md)
-- [Python pandas.str.replace 不起作用](../Python数据处理/Python-pandas-str-replace-不起作用.md)
+- [Python pandas遍历行数据的2种方法](../../Python数据处理/Python-pandas遍历行数据的2种方法/)
+- [Python 利用pandas对数据进行特定排序](../../Python数据处理/Python-利用pandas对数据进行特定排序/)
+- [Python pandas.str.replace 不起作用](../../Python数据处理/Python-pandas-str-replace-不起作用/)
+
 
 
 **************************************************************************

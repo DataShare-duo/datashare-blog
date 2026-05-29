@@ -3,7 +3,7 @@ title: Python 在指定文件夹安装三方库，并进行加载使用
 slug: Python基础库/Python-在指定文件夹安装三方库，并进行加载使用
 published: 2025-04-17
 description: Python 指定文件夹安装三方库
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, pip]
 category: Python/Python基础库
@@ -37,9 +37,11 @@ print(pyspark.__version__)
 ```
 
 # 历史相关文章
-- [Python中的Lambda匿名函数](/Python数据处理/Python中的Lambda匿名函数.md)
-- [Python-常用的加解密算法实例应用](/Python数据处理/Python-常用的加解密算法实例应用.md)
-- [Python-字符串格式化方法总结](/Python数据处理/Python-字符串格式化方法总结.md)
+- [Python中的Lambda匿名函数](../../Python数据处理/Python中的Lambda匿名函数/)
+- [Python 常用的加解密算法实例应用](../../Python数据处理/Python-常用的加解密算法实例应用/)
+- [Python 字符串格式化方法总结](../../Python数据处理/Python-字符串格式化方法总结/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

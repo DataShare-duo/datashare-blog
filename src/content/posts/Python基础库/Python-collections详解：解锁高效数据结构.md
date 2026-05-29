@@ -3,7 +3,7 @@ title: Python collections详解：解锁高效数据结构
 slug: Python基础库/Python-collections详解：解锁高效数据结构
 published: 2025-08-12
 description: Python collections基础库
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库]
 category: Python/Python基础库
@@ -125,9 +125,9 @@ od.popitem(last=False)  # FIFO删除，删除 ('a', 2)
 
 
 # 历史相关文章
-- [Python-字典已经是有序的，你知道吗？](/Python基础库/Python-字典已经是有序的，你知道吗？.md)
-- [Python中的Lambda匿名函数](/Python数据处理/Python中的Lambda匿名函数.md)
-- [Python利用partial偏函数，生成不同的聚合函数](/Python基础库/Python利用partial偏函数，生成不同的聚合函数.md)
+- [Python 字典已经是有序的，你知道吗？](../../Python基础库/Python-字典已经是有序的，你知道吗？/)
+- [Python中的Lambda匿名函数](../../Python数据处理/Python中的Lambda匿名函数/)
+- [Python利用partial偏函数，生成不同的聚合函数](../../Python基础库/Python利用partial偏函数，生成不同的聚合函数/)
 
 
 **************************************************************************

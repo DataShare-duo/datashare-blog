@@ -211,9 +211,10 @@ Main()
 ```
 
 # 历史相关文章
-- [数据分析师常用的 Linux 命令总结](./数据分析师常用的-Linux-命令总结.md)
-- [Python 基于ssh连接远程Mysql数据库](../Python基础库/Python-基于ssh连接远程Mysql数据库.md)
-- [Linux （Centos 7）中 Anaconda环境管理，安装不同的版本Python包](./Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包.md)
+- [数据分析师常用的-Linux-命令总结](../../Linux/数据分析师常用的-Linux-命令总结/)
+- [Python-基于ssh连接远程Mysql数据库](../../Python基础库/Python-基于ssh连接远程Mysql数据库/)
+- [Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包](../../Linux/Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

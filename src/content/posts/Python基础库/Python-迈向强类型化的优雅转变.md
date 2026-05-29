@@ -3,7 +3,7 @@ title: Python 迈向强类型化的优雅转变
 slug: Python基础库/Python-迈向强类型化的优雅转变
 published: 2025-06-16
 description: Python 迈向强类型化
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 类型]
 category: Python/Python基础库
@@ -69,9 +69,10 @@ def greet(user: UserProfile) -> None:
 你目前使用的是Python哪个版本？欢迎留言交流
 
 # 历史相关文章
-- [Python-新晋包项目工具uv的简单尝试](/Python基础库/Python-新晋包项目工具uv的简单尝试.md)
-- [Python-标准库之pathlib，路径操作](/Python基础库/Python-标准库之pathlib，路径操作.md)
-- [Python-标准库之pathlib（二），路径操作](/Python基础库/Python-标准库之pathlib（二），路径操作.md)
+- [Python 新晋包项目工具uv的简单尝试](../../Python基础库/Python-新晋包项目工具uv的简单尝试/)
+- [Python 标准库之pathlib，路径操作](../../Python基础库/Python-标准库之pathlib，路径操作/)
+- [Python 标准库之pathlib（二），路径操作](../../Python基础库/Python-标准库之pathlib（二），路径操作/)
+
 
 
 **************************************************************************

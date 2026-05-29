@@ -3,7 +3,7 @@ title: Python 单实例模式详解
 slug: Python基础库/Python-单实例模式详解
 published: 2025-08-22
 description: Python 单实例模式
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 类]
 category: Python/Python基础库
@@ -91,9 +91,10 @@ super(Singleton, cls).__new__(cls) → 实际调用object.__new__(Singleton)
 4. 缓存系统：全局缓存需要统一管理，避免多个缓存实例导致数据不一致
 
 # 历史相关文章
-- [Python-collections详解：解锁高效数据结构](/Python基础库/Python-collections详解：解锁高效数据结构.md)
-- [Python-函数参数类型与使用规则详解](/Python基础库/Python-函数参数类型与使用规则详解.md)
-- [Python-2个好用的装饰器函数](/Python基础库/Python-2个好用的装饰器函数.md)
+- [Python collections详解：解锁高效数据结构](../../Python基础库/Python-collections详解：解锁高效数据结构/)
+- [Python 函数参数类型与使用规则详解](../../Python基础库/Python-函数参数类型与使用规则详解/)
+- [Python 2个好用的装饰器函数](../../Python基础库/Python-2个好用的装饰器函数/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

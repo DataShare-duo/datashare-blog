@@ -86,7 +86,7 @@ from test.test_hdfs_ck
 
 
 # 历史相关文章
-- [Clickhouse 基础使用教程](./Clickhouse-基础使用教程.md)
-- [Clickhouse中创建生成日期序列自定义函数](./Clickhouse中创建生成日期序列自定义函数.md)
+- [Clickhouse 基础使用教程](../../Clickhouse/Clickhouse-基础使用教程/)
+- [Clickhouse中创建生成日期序列自定义函数](../../Clickhouse/Clickhouse中创建生成日期序列自定义函数/)
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

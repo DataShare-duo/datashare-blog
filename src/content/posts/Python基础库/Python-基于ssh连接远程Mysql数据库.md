@@ -3,7 +3,7 @@ title: Python 基于ssh连接远程Mysql数据库
 slug: Python基础库/Python-基于ssh连接远程Mysql数据库
 published: 2020-11-20
 description: Python 连接远程Mysql
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, ssh, mysql]
 category: Python/Python基础库
@@ -91,7 +91,9 @@ def mysql_ssh(sql,args=None):
 - 传入参数时建议用这种方式`cursor.execute(sql,args)`，防止sql注入的风险
 
 # 历史相关文章
-- [Python加载txt数据乱码问题升级版解决方法](../Python数据处理/Python加载txt数据乱码问题升级版解决方法.md)
-- [Python文件打包成exe可执行程序](./Python文件打包成exe可执行程序.md)
+- [Python加载txt数据乱码问题升级版解决方法](../../Python数据处理/Python加载txt数据乱码问题升级版解决方法/)
+- [Python文件打包成exe可执行程序](../../Python基础库/Python文件打包成exe可执行程序/)
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注 DataShare （同微），不定期分享干货**

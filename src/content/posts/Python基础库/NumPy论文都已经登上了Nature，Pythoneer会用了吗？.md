@@ -3,7 +3,7 @@ title: NumPy论文都已经登上了Nature，Pythoneer会用了吗？
 slug: Python基础库/NumPy论文都已经登上了Nature，Pythoneer会用了吗？
 published: 2020-09-25
 description: NumPy 基础知识
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python,numpy]
 category: Python/Python基础库
@@ -191,8 +191,10 @@ array([0.2, 0.4, 0.6, 0.8])
 array([0.2, 0.4, 0.6, 0.8])
 ```
 # 历史相关文章
-- [Python Numpy中的范数](../Python数据处理/Python--Numpy中的范数.md)
-- [Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？](../Python数据处理/Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？.md)
+- [Python--Numpy中的范数](../../Python数据处理/Python--Numpy中的范数/)
+- [Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？](../../Python数据处理/Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？/)
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号DataShare，不定期分享干货**
 

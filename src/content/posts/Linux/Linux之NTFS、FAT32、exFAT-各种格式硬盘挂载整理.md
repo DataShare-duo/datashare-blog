@@ -71,7 +71,10 @@ mount /dev/sdb2  /mnt/Windows
 - 硬盘里面具体要看有几个分区，挂载时指定分区号 `sdb1` or `sdb2`
 
 # 历史相关文章
-- [Linux （Centos 7）中 Anaconda环境管理，安装不同的版本Python包](./Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包.md)
-- [Python文件打包成exe可执行程序](../Python基础库/Python文件打包成exe可执行程序.md)
+- [Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包](../../Linux/Linux-（Centos-7）中-Anaconda环境管理，安装不同的版本Python包/)
+- [Python文件打包成exe可执行程序](../../Python基础库/Python文件打包成exe可执行程序/)
+
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注DataShare，不定期分享干货**

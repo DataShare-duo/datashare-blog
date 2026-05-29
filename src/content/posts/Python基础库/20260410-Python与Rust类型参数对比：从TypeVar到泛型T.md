@@ -3,7 +3,7 @@ title: Python与Rust类型参数对比：从TypeVar到泛型T
 slug: Python基础库/20260410-Python与Rust类型参数对比：从TypeVar到泛型T
 published: 2026-04-10
 description: Python与Rust类型参数对比
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python,rust,类型]
 category: Python/Python基础库
@@ -186,10 +186,12 @@ struct Consumer<T> {
 
 
 # 历史相关文章
-- [Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？](/Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？.md)
-- [Python-新晋包项目工具uv的简单尝试](/Python基础库/Python-新晋包项目工具uv的简单尝试.md)
-- [Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！](/Python基础库/Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！.md)
-- [Python-利用-uv-“一键”-快速部署服务](/Python基础库/Python-利用-uv-“一键”-快速部署服务.md)
+- [Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？](../../Python基础库/Rust-是否会重写-Python-解释器与有关的库，替代-C-语言地位？/)
+- [Python-新晋包项目工具uv的简单尝试](../../Python基础库/Python-新晋包项目工具uv的简单尝试/)
+- [Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！](../../Python基础库/Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！/)
+- [Python-利用-uv-“一键”-快速部署服务](../../Python基础库/Python-利用-uv-“一键”-快速部署服务/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

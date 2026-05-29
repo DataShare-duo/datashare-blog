@@ -3,7 +3,7 @@ title: Python 新晋包项目工具uv的简单尝试
 slug: Python基础库/Python-新晋包项目工具uv的简单尝试
 published: 2025-05-20
 description: Python uv工具
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, uv]
 category: Python/Python基础库
@@ -90,9 +90,10 @@ uv python dir
 ```
 
 # 历史相关文章
-- [Python中一个构建-web-页面的神奇库-streamlit](/Web/Python中一个构建-web-页面的神奇库-streamlit.md)
-- [Python-基于pyhive库操作hive](/Python数据处理/Python-基于pyhive库操作hive.md)
-- [Python-基于plotly库快速画旭日图](/数据可视化/Python-基于plotly库快速画旭日图.md)
+- [Python中一个构建 web 页面的神奇库 streamlit](../../Web/Python中一个构建-web-页面的神奇库-streamlit/)
+- [Python 基于pyhive库操作hive](../../Python数据处理/Python-基于pyhive库操作hive/)
+- [Python 基于plotly库快速画旭日图](../../数据可视化/Python-基于plotly库快速画旭日图/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

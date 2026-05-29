@@ -3,7 +3,7 @@ title: Python 利用 uv “一键” 快速部署服务
 slug: Python基础库/Python-利用-uv-“一键”-快速部署服务
 published: 2026-01-14
 description: Python uv部署服务
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, uv, Web]
 category: Python/Python基础库
@@ -58,8 +58,8 @@ uv add uvicorn
 该项目的前、后端代码，均是利用 DeepSeek 生成，并调试运行成功
 
 # 历史相关文章
-- [Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！](/Python基础库/Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！.md)
-- [Python-新晋包项目工具uv的简单尝试](/Python基础库/Python-新晋包项目工具uv的简单尝试.md)
+- [Python 项目管理新思路：用 uv Workspace 共享虚拟环境，省时省空间！](../../Python基础库/Python-项目管理新思路：用-uv-Workspace-共享虚拟环境，省时省空间！/)
+- [Python 新晋包项目工具uv的简单尝试](../../Python基础库/Python-新晋包项目工具uv的简单尝试/)
 
 
 **************************************************************************

@@ -3,7 +3,7 @@ title: polars学习-02 上下文与表达式
 slug: polars-学习/Python_polars学习-02_上下文与表达式
 published: 2024-04-29
 description: Polars Contexts 上下文 与 Expressions 表达式
-image: ./polars.svg
+image: /polars.svg
 tags: [python, polars]
 category: Python/Polars-学习
 draft: false
@@ -184,9 +184,9 @@ df.sort(["Sepal.Length","Petal.Length"],descending=[True,False])
 
 # 历史相关文章
 - [Python polars学习-01 读取与写入文件](../Python_polars学习-01_读取与写入文件/)
-- [Python pandas遍历行数据的2种方法](../Python数据处理/Python-pandas遍历行数据的2种方法.md)
-- [Python 利用pandas对数据进行特定排序](../Python数据处理/Python-利用pandas对数据进行特定排序.md)
-- [Python pandas.str.replace 不起作用](../Python数据处理/Python-pandas-str-replace-不起作用.md)
+- [Python pandas遍历行数据的2种方法](../../Python数据处理/Python-pandas遍历行数据的2种方法/)
+- [Python 利用pandas对数据进行特定排序](../../Python数据处理/Python-利用pandas对数据进行特定排序/)
+- [Python pandas.str.replace 不起作用](../../Python数据处理/Python-pandas-str-replace-不起作用/)
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

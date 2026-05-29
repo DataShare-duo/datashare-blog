@@ -3,7 +3,7 @@ title: Python 函数参数类型与使用规则详解
 slug: Python基础库/Python-函数参数类型与使用规则详解
 published: 2025-12-03
 description: Python 函数参数类型
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 函数]
 category: Python/Python基础库
@@ -118,9 +118,9 @@ func(1, x=2, y=3)  # a=1, kwargs={'x':2, 'y':3}
 ```
 
 # 历史相关文章
-- [Python函数参数：列表作为默认值，一个隐藏的陷阱！](/Python基础库/Python函数参数：列表作为默认值，一个隐藏的陷阱！.md)
-- [Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力](/Python基础库/Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力.md)
-- [Python-2个好用的装饰器函数](/Python基础库/Python-2个好用的装饰器函数.md)
+- [Python 函数参数：列表作为默认值，一个隐藏的陷阱！](../../Python基础库/Python函数参数：列表作为默认值，一个隐藏的陷阱！/)
+- [Python 3.14 无GIL解释器性能测试：释放多核CPU的并行潜力](../../Python基础库/Python-3-14-无GIL解释器性能测试：释放多核CPU的并行潜力/)
+- [Python 2个好用的装饰器函数](../../Python基础库/Python-2个好用的装饰器函数/)
 
 
 **************************************************************************

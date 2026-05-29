@@ -3,7 +3,7 @@ title: polars学习-07_缺失值
 slug: polars-学习/Python_polars学习-07_缺失值
 published: 2024-06-25
 description: Polars 缺失值处理
-image: ./polars.svg
+image: /polars.svg
 tags: [python, polars]
 category: Python/Polars-学习
 draft: false
@@ -190,12 +190,14 @@ print(fill_interpolation_df)
 └──────┴──────┴──────┘
 ```
 # 历史相关文章
-- [Python polars学习-01 读取与写入文件](./Python_polars学习-01_读取与写入文件.md)
-- [Python polars学习-02 上下文与表达式](./Python_polars学习-02_上下文与表达式.md)
-- [Python polars学习-03 数据类型转换](./Python_polars学习-03_数据类型转换.md)
-- [Python polars学习-04 字符串数据处理](./Python_polars学习-04_字符串数据处理.md)
-- [Python polars学习-05 包含的数据结构](./Python_polars学习-05_包含的数据结构.md)
-- [Python polars学习-06 Lazy / Eager API](./Python_polars学习-06_Lazy-Eager-API.md)
+- [Python polars学习-01 读取与写入文件](../Python_polars学习-01_读取与写入文件/)
+- [Python polars学习-02 上下文与表达式](../../polars-学习/Python_polars学习-02_上下文与表达式/)
+- [Python polars学习-03 数据类型转换](../../polars-学习/Python_polars学习-03_数据类型转换/)
+- [Python polars学习-04 字符串数据处理](../../polars-学习/Python_polars学习-04_字符串数据处理/)
+- [Python polars学习-05 包含的数据结构](../../polars-学习/Python_polars学习-05_包含的数据结构/)
+- [Python polars学习-06 Lazy-Eager-API](../../polars-学习/Python_polars学习-06_Lazy-Eager-API/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

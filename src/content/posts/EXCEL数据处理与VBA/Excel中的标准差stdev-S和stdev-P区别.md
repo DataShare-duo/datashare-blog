@@ -44,9 +44,11 @@ $$\sqrt{\frac{\sum(x-\overline{x})^2}{n}}$$
 - 数据是全量时用stdev.P
 
 # 历史相关文章
-- [Python用xlwings库处理Excel](../Python数据处理/Python用xlwings库处理Excel.md)
-- [像excel透视表一样使用pandas透视函数](../Python数据处理/像excel透视表一样使用pandas透视函数.md)
-- [Python通过修改系统注册表，强制设置Excel宏信任级别](../Python数据处理/Python通过修改系统注册表，强制设置Excel宏信任级别.md)
+- [Python用xlwings库处理Excel](../../Python数据处理/Python用xlwings库处理Excel/)
+- [像excel透视表一样使用pandas透视函数](../../Python数据处理/像excel透视表一样使用pandas透视函数/)
+- [Python通过修改系统注册表，强制设置Excel宏信任级别](../../Python数据处理/Python通过修改系统注册表，强制设置Excel宏信任级别/)
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**
 

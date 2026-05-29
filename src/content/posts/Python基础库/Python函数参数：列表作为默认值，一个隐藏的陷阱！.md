@@ -3,7 +3,7 @@ title: Python 函数参数：列表作为默认值，一个隐藏的陷阱！
 slug: Python基础库/Python函数参数：列表作为默认值，一个隐藏的陷阱！
 published: 2025-08-05
 description: Python 函数参数
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 函数]
 category: Python/Python基础库
@@ -62,9 +62,9 @@ def add_item(item, items=None):
     return items
 ```
 # 历史相关文章
-- [Python-2个好用的装饰器函数](/Python基础库/Python-2个好用的装饰器函数.md)
-- [Python-迈向强类型化的优雅转变](/Python基础库/Python-迈向强类型化的优雅转变.md)
-- [Python-字典已经是有序的，你知道吗？](/Python基础库/Python-字典已经是有序的，你知道吗？.md)
+- [Python 2个好用的装饰器函数](../../Python基础库/Python-2个好用的装饰器函数/)
+- [Python 迈向强类型化的优雅转变](../../Python基础库/Python-迈向强类型化的优雅转变/)
+- [Python 字典已经是有序的，你知道吗？](../../Python基础库/Python-字典已经是有序的，你知道吗？/)
 
 
 **************************************************************************

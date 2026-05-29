@@ -1,9 +1,9 @@
 ---
-title: Python内置的 os 模块常用函数、方法
+title: Python 内置的 os 模块常用函数、方法
 slug: Python基础库/Python内置的-os-模块常用函数、方法
 published: 2020-07-11
 description: Python os基础库
-image: ./python.jpg
+image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库]
 category: Python/Python基础库
@@ -96,8 +96,10 @@ os.makedirs('./1/2')
 ```
 以上这些方法是在工作中经常使用的，如有新的路径的需求可以在其他一些网站进行查找
 # 历史相关文章
-- [利用Python枚举所有的排列情况](../数学知识/利用Python枚举所有的排列情况.md)
-- [Python jupyter 常用语句汇总](../Python数据处理/Python-jupyter-常用语句汇总.md)
+- [利用Python枚举所有的排列情况](../../数学知识/利用Python枚举所有的排列情况/)
+- [Python jupyter 常用语句汇总](../../Python数据处理/Python-jupyter-常用语句汇总/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**
