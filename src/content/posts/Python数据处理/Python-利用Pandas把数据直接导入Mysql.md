@@ -104,8 +104,10 @@ with engine.begin() as conn:
 - [Commit and rollback with pandas.DataFrame.to_sql()](https://capelastegui.wordpress.com/2018/05/21/commit-and-rollback-with-pandas-dataframe-to_sql/)
 
 # 历史相关文章
-- [Python-基于ssh连接远程Mysql数据库](/Python基础库/Python-基于ssh连接远程Mysql数据库.md)
-- [Python-pandas-里面的数据类型坑，astype要慎用](/Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用.md)
+- [Python 基于ssh连接远程Mysql数据库](../../Python基础库/Python-基于ssh连接远程Mysql数据库/)
+- [Python pandas 里面的数据类型坑，astype要慎用](../../Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

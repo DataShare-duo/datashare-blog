@@ -72,9 +72,11 @@ with pd.ExcelWriter('url测试数据-禁止URL转换.xlsx',
 
 
 # 历史相关文章
-- [Python-pandas中重排列与列重名](/Python数据处理/Python-pandas中重排列与列重名.md)
-- [Python-pandas-2-0-初探](/Python数据处理/Python-pandas-2-0-初探.md)
-- [对比Excel，利用pandas进行数据分析各种用法](/Python数据处理/对比Excel，利用pandas进行数据分析各种用法.md)
+- [Python pandas中重排列与列重名](../../Python数据处理/Python-pandas中重排列与列重名/)
+- [Python pandas.2.0 初探](../../Python数据处理/Python-pandas-2-0-初探/)
+- [对比Excel，利用pandas进行数据分析各种用法](../../Python数据处理/对比Excel，利用pandas进行数据分析各种用法/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

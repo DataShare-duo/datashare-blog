@@ -82,8 +82,10 @@ array([[ 6.],
        [38.]])
 ```
 # 历史相关文章
-- [Pythoner还在为了练习Numpy而没有真实数据而烦恼吗？](./Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？.md)
-- [Numpy中的shuffle和permutation区别](./Numpy中的shuffle和permutation区别.md)
+- [Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？](../../Python数据处理/Pythonner还在为了练习Numpy而没有真实数据而烦恼吗？/)
+- [Numpy中的shuffle和permutation区别](../../Python数据处理/Numpy中的shuffle和permutation区别/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号，不定期分享干货**

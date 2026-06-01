@@ -171,8 +171,11 @@ C语言的速度最快，Python语言的功能最为完善
 字段之间的定界符，这样就能正确解析包含特殊符号的字段了
 
 # 历史相关文章
-- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](./Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题.md)
-- [Python pandas数据分列，分割符号&固定宽度](./Python-pandas数据分列，分割符号&固定宽度.md)
-- [Python 字符串格式化方法总结](./Python-字符串格式化方法总结.md)
+- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](../../Python数据处理/Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题/)
+- [Python pandas数据分列，分割符号&固定宽度](../../Python数据处理/Python-pandas数据分列，分割符号&固定宽度/)
+- [Python 字符串格式化方法总结](../../Python数据处理/Python-字符串格式化方法总结/)
+
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

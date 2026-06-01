@@ -46,9 +46,11 @@ draft: false
 
 
 # 历史相关文章
-- [Python pandas.str.replace 不起作用](./Python-pandas-str-replace-不起作用.md)
-- [Python pandas 里面的数据类型坑，astype要慎用](./Python-pandas-里面的数据类型坑，astype要慎用.md)
-- [Python数据处理中 pd.concat 与 pd.merge 区别](./Python数据处理中-pd-concat-与-pd-merge-区别.md)
+- [Python pandas.str.replace 不起作用](../../Python数据处理/Python-pandas-str-replace-不起作用/)
+- [Python pandas 里面的数据类型坑，astype要慎用](../../Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用/)
+- [Python数据处理中 pd.concat 与 pd.merge 区别](../../Python数据处理/Python数据处理中-pd-concat-与-pd-merge-区别/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

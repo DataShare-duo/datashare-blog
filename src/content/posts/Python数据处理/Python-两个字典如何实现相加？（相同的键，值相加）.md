@@ -42,8 +42,9 @@ def sum_dict(a,b):
 ![collections.Counter](./images/6641583-13147bae1028d01a.webp)
 
 # 历史相关文章
-- [Python math模块详解](./Python基础库/Python-math模块详解.md)
-- [Python pandas数据计数函数value_counts](./Python-pandas数据计数函数value_counts.md)
+- [Python math模块详解](../../Python基础库/Python-math模块详解/)
+- [Python pandas数据计数函数value_counts](../../Python数据处理/Python-pandas数据计数函数value_counts/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注 DataShare （同微），不定期分享干货**

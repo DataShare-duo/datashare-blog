@@ -58,9 +58,10 @@ http://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.str.repl
 
 
 # 历史相关文章
-- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](./Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题.md)
-- [Python pandas 里面的数据类型坑，astype要慎用](./Python-pandas-里面的数据类型坑，astype要慎用.md)
-- [Python pandas 数据筛选与赋值升级版详解](./Python-pandas-数据筛选与赋值升级版详解.md)
+- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](../../Python数据处理/Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题/)
+- [Python pandas 里面的数据类型坑，astype要慎用](../../Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用/)
+- [Python pandas 数据筛选与赋值升级版详解](../../Python数据处理/Python-pandas-数据筛选与赋值升级版详解/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

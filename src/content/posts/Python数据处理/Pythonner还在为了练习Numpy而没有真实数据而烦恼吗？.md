@@ -58,8 +58,10 @@ print(img_array.size)    #数组中所有元素的个数  400*600*3
 ![](./images/6641583-caa2c071fef28c2a.webp)
 
 # 历史相关文章
-- [Numpy中的shuffle和permutation区别](./Numpy中的shuffle和permutation区别.md)
-- [Python基于opencv “三维”旋转图片，解决日常小问题](./Python基于opencv-“三维”旋转图片，解决日常小问题.md)
+- [Numpy中的shuffle和permutation区别](../../Python数据处理/Numpy中的shuffle和permutation区别/)
+- [Python基于 opencv “三维”旋转图片，解决日常小问题](../../Python图像处理/Python基于opencv-“三维”旋转图片，解决日常小问题/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号，不定期分享干货**

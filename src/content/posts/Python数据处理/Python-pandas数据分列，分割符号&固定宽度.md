@@ -75,8 +75,9 @@ data_result=data.join(split_data_2)
 ![固定宽度](./images/6641583-ec992c559e6cf4aa.webp)
 
 # 历史相关文章
-- [Python pandas 里面的数据类型坑，astype要慎用](./Python-pandas-里面的数据类型坑，astype要慎用.md)
-- [Python pandas 数据无法正常分列](./Python-pandas-数据无法正常分列.md)
+- [Python pandas 里面的数据类型坑，astype要慎用](../../Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用/)
+- [Python pandas 数据无法正常分列](../../Python数据处理/Python-pandas-数据无法正常分列/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

@@ -36,8 +36,9 @@ pd.read_csv('test.csv',lineterminator='\n')
 
 ***可以看出，如果不加 `lineterminator` 参数的话，数据行数会不一致，加了参数后，数据行数保持一致。由于Linux与Windows两个系统的换行符不一样，因此大家在处理数据时可以利用 `lineterminator` 参数来避免这样的问题，分享出来供大家参考***
 # 历史相关文章
-- [Python pandas数据计数函数value_counts](./Python-pandas数据计数函数value_counts.md)
-- [Python pandas 数据无法正常分列](./Python-pandas-数据无法正常分列.md)
+- [Python pandas数据计数函数value_counts](../../Python数据处理/Python-pandas数据计数函数value_counts/)
+- [Python pandas 数据无法正常分列](../../Python数据处理/Python-pandas-数据无法正常分列/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

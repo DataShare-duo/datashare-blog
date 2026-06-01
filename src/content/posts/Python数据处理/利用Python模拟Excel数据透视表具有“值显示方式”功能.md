@@ -48,7 +48,13 @@ def pivot_percent(df, index, value, decimal=2):
 # jupyter notebook 完成代码
 ![jupyter notebook](./images/6641583-2ae140d750973faf.webp)
 # 历史相关文章
-- [像excel透视表一样使用pandas透视函数](./像excel透视表一样使用pandas透视函数.md)
-- [对比Excel，利用pandas进行数据分析各种用法](./对比Excel，利用pandas进行数据分析各种用法.md)
+- [像excel透视表一样使用pandas透视函数](../../Python数据处理/像excel透视表一样使用pandas透视函数/)
+- [对比Excel，利用pandas进行数据分析各种用法](../../Python数据处理/对比Excel，利用pandas进行数据分析各种用法/)
+
+
+
+
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

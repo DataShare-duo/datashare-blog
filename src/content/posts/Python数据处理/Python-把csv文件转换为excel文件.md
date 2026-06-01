@@ -83,9 +83,10 @@ python csv_to_excel.py -in test.csv -out test_convert.xlsx
 ![使用教程](./images/6641583-a774b1953bb9f889.webp)
 
 # 历史相关文章
-- [对csv文件，又get了新的认知](./对csv文件，又get了新的认知.md)
-- [Python 处理Excel文件为了通用原则，建议用openpyxl库](./Python-处理Excel文件为了通用原则，建议用openpyxl库.md)
-- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](./Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题.md)
+- [对csv文件，又get了新的认知](../../Python数据处理/对csv文件，又get了新的认知/)
+- [Python 处理Excel文件为了通用原则，建议用openpyxl库](../../Python数据处理/Python-处理Excel文件为了通用原则，建议用openpyxl库/)
+- [Python pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题](../../Python数据处理/Python-pandas在读取csv文件时（linux与windows之间传输），数据行数不一致的问题/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

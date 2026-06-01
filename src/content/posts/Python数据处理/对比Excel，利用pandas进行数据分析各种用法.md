@@ -240,8 +240,11 @@ data['性别_处理3']=data['性别'].map(dict_gender)
 ![if函数](./images/6641583-2207d115a03f674e.webp)
 
 # 历史相关文章
-- [像excel透视表一样使用pandas透视函数](./像excel透视表一样使用pandas透视函数.md)
-- [Python pandas 数据筛选与赋值升级版详解](./Python-pandas-数据筛选与赋值升级版详解.md)
+- [像excel透视表一样使用pandas透视函数](../../Python数据处理/像excel透视表一样使用pandas透视函数/)
+- [Python pandas 数据筛选与赋值升级版详解](../../Python数据处理/Python-pandas-数据筛选与赋值升级版详解/)
+
+
+
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**
 

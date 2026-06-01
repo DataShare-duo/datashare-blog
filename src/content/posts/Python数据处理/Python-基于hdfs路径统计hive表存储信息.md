@@ -290,9 +290,11 @@ if __name__ == "__main__":
     main()
 ```
 # 历史相关文章
-- [Python-基于pyhive库操作hive](/Python数据处理/Python-基于pyhive库操作hive.md)
-- [Python-利用pandas对数据进行特定排序](/Python数据处理/Python-利用pandas对数据进行特定排序.md)
-- [hadoop-常用命令总结](/Hive/hadoop-常用命令总结.md)
+- [Python 基于pyhive库操作hive](../../Python数据处理/Python-基于pyhive库操作hive/)
+- [Python 利用pandas对数据进行特定排序](../../Python数据处理/Python-利用pandas对数据进行特定排序/)
+- [hadoop-常用命令总结](../../Hive/hadoop-常用命令总结/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

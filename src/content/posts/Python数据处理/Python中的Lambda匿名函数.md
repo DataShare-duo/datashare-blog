@@ -112,9 +112,10 @@ print("Filtered and Squared Numbers:", filtered_and_squared)
 ```
 
 # 历史相关文章
-- [Python利用partial偏函数，生成不同的聚合函数](../Python基础库/Python利用partial偏函数，生成不同的聚合函数.md)
-- [Python 字典已经是有序的，你知道吗？](../Python基础库/Python-字典已经是有序的，你知道吗？.md)
-- [Python 内建模块 bisect，数组二分查找算法](../Python基础库/Python-内建模块-bisect，数组二分查找算法.md)
+- [Python利用partial偏函数，生成不同的聚合函数](../../Python基础库/Python利用partial偏函数，生成不同的聚合函数/)
+- [Python 字典已经是有序的，你知道吗？](../../Python基础库/Python-字典已经是有序的，你知道吗？/)
+- [Python 内建模块 bisect，数组二分查找算法](../../Python基础库/Python-内建模块-bisect，数组二分查找算法/)
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

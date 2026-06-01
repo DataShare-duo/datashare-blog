@@ -73,10 +73,9 @@ Photo Water Marker 作为一个**致力于解决日常高频、小型、隐私�
 *项目主页：*[https://github.com/DataShare-duo/photo_water_marker](https://github.com/DataShare-duo/photo_water_marker)
 
 # 历史相关文章
-- [利用Python生成手绘效果的图片](/Python图像处理/利用Python生成手绘效果的图片.md)
+- [利用Python生成手绘效果的图片](../../Python图像处理/利用Python生成手绘效果的图片/)
 - [利用Python实现二维码自由](../../Python图像处理/利用Python实现二维码自由/)
-- [Python-利用聚类算法对图片进行颜色压缩](/Python图像处理/Python-利用聚类算法对图片进行颜色压缩.md)
-
+- [Python 利用聚类算法对图片进行颜色压缩](../../Python图像处理/Python-利用聚类算法对图片进行颜色压缩/)
 
 
 

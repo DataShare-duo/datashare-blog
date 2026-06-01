@@ -144,9 +144,10 @@ Python 后端的日常实践就是：
 
 
 # 历史相关文章
-- [Python-基于协程的端口扫描工具](/Python基础库/Python-基于协程的端口扫描工具.md)
-- [Python-利用aiohttp异步流式下载文件](/Python数据处理/Python-利用aiohttp异步流式下载文件.md)
-- [Python-利用协程整合IPTV直播源](/数据采集/Python-利用协程整合IPTV直播源.md)
+- [Python 基于协程的端口扫描工具](../../Python基础库/Python-基于协程的端口扫描工具/)
+- [Python 利用aiohttp异步流式下载文件](../../Python数据处理/Python-利用aiohttp异步流式下载文件/)
+- [Python 利用协程整合IPTV直播源](../../数据采集/Python-利用协程整合IPTV直播源/)
+
 
 
 **************************************************************************

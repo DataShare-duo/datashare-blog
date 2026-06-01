@@ -84,10 +84,13 @@ data_onehot_def.head()
 ![OneHot_def](./images/6641583-834bbbd8c224a05c.webp)
 
 # 历史相关文章
-- **[Python pandas 里面的数据类型坑，astype要慎用]()**
-- **[Pandas数据处理误区要知其然知其所以然]()**
-- **[Python pandas 数据筛选与赋值升级版详解]()**
-- **[历史双色球数据分析---python]()**
+- [Python pandas 里面的数据类型坑，astype要慎用](../../Python数据处理/Python-pandas-里面的数据类型坑，astype要慎用/)
+- [Pandas数据处理误区要知其然知其所以然](../../Python数据处理/Pandas数据处理误区要知其然知其所以然/)
+- [Python pandas 数据筛选与赋值升级版详解](../../Python数据处理/Python-pandas-数据筛选与赋值升级版详解/)
+- [历史双色球数据分析---python](../../Python数据处理/历史双色球数据分析---python/)
+
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**
