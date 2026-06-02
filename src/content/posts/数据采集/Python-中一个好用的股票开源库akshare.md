@@ -158,9 +158,11 @@ if __name__ == '__main__':
 
 ```
 # 历史相关文章
-- [Python 中一个好用的地址解析工具cpca](../Python基础库/Python-中一个好用的地址解析工具cpca（chinese_province_city_area_mapper）.md)
-- [Python 除了结巴分词，还有什么好用的中文分词工具？](../NLP/Python-除了结巴分词，还有什么好用的中文分词工具？.md)
-- [Python 基于datetime库的日期时间数据处理](../Python数据处理/Python-基于datetime库的日期时间数据处理.md)
+- [Python 中一个好用的地址解析工具cpca（chinese_province_city_area_mapper）](../../Python基础库/Python-中一个好用的地址解析工具cpca（chinese_province_city_area_mapper）/)
+- [Python-除了结巴分词，还有什么好用的中文分词工具？](../../NLP/Python-除了结巴分词，还有什么好用的中文分词工具？/)
+- [Python 基于datetime库的日期时间数据处理](../../Python数据处理/Python-基于datetime库的日期时间数据处理/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

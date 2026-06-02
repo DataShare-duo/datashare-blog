@@ -61,9 +61,12 @@ cosine_similarity(a1)   #a1中的行向量之间的两两余弦相似度
 
 
 ![sklearn余弦相似度](./images/6641583-6f38d392eb993e79.webp)
+
 # 历史相关文章
-- [Python Numpy中的范数](../Python数据处理/Python--Numpy中的范数.md)
-- [Python 如何确定K-Means聚类的簇数](../数据分析与挖掘/Python-如何确定K-Means聚类的簇数.md)
+- [Python Numpy中的范数](../../Python数据处理/Python--Numpy中的范数/)
+- [Python 如何确定K-Means聚类的簇数](../../数据分析与挖掘/Python-如何确定K-Means聚类的簇数/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号DataShare，不定期分享干货**

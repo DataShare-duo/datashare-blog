@@ -68,9 +68,11 @@ ani.save('plasma.gif', writer='pillow', fps=10) #viridis
 这里重点是创建动画更新函数 `animate`，用于更新每一帧散点图中的点的位置，传入的参数 `i` 代表帧编号参数，是 `FuncAnimation` 每次调用更新函数时传入的参数，表示当前动画帧的索引
 
 # 历史相关文章
-- [Python 基于plotly库快速画旭日图](./Python-基于plotly库快速画旭日图.md)
-- [Python 利用Matplotlib制作初中时圆规画的图](./Python-利用Matplotlib制作初中时圆规画的图.md)
-- [Matplotlib 自定义函数实现左边柱形图，右边饼图](./Matplotlib-自定义函数实现左边柱形图，右边饼图.md)
+- [Python 基于plotly库快速画旭日图](../../数据可视化/Python-基于plotly库快速画旭日图/)
+- [Python 利用Matplotlib制作初中时圆规画的图](../../数据可视化/Python-利用Matplotlib制作初中时圆规画的图/)
+- [Matplotlib 自定义函数实现左边柱形图，右边饼图](../../数据可视化/Matplotlib-自定义函数实现左边柱形图，右边饼图/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

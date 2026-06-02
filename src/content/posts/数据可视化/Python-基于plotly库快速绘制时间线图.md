@@ -89,9 +89,11 @@ fig.update_xaxes(
 fig.show()
 ```
 # 历史相关文章
-- [Python 基于plotly库快速画旭日图](./Python-基于plotly库快速画旭日图.md)
-- [Python 基于Matplotlib制作动态图](./Python-基于Matplotlib制作动态图.md)
-- [Matplotlib 自定义函数实现左边柱形图，右边饼图](./Matplotlib-自定义函数实现左边柱形图，右边饼图.md)
+- [Python 基于plotly库快速画旭日图](../../数据可视化/Python-基于plotly库快速画旭日图/)
+- [Python 基于Matplotlib制作动态图](../../数据可视化/Python-基于Matplotlib制作动态图/)
+- [Matplotlib 自定义函数实现左边柱形图，右边饼图](../../数据可视化/Matplotlib-自定义函数实现左边柱形图，右边饼图/)
+
+
 
 **************************************************************************
 **以上是自己实践中遇到的一些问题，分享出来供大家参考学习，欢迎关注微信公众号：DataShare ，不定期分享干货**

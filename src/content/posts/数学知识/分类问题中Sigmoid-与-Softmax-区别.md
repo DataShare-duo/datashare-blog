@@ -46,9 +46,11 @@ Softmax =多类别分类问题=只有一个正确答案=非相互独立
 
 例如：手写数字
 `常用于二分类问题`
+
 # 历史相关文章
-- [自然语言处理（NLP）-Bert与Lstm结合](/NLP/自然语言处理（NLP）-Bert与Lstm结合.md)
-- [Python-math模块详解](/Python基础库/Python-math模块详解.md)
+- [自然语言处理（NLP）-Bert与Lstm结合](../../NLP/自然语言处理（NLP）-Bert与Lstm结合/)
+- [Python math模块详解](../../Python基础库/Python-math模块详解/)
+
 
 
 **************************************************************************
