@@ -1,12 +1,12 @@
 ---
 title: 分类问题中 Sigmoid 与 Softmax 区别
-slug: 数据知识/分类问题中Sigmoid-与-Softmax-区别
+slug: 数学知识/分类问题中Sigmoid-与-Softmax-区别
 published: 2020-11-05
 description: Python Sigmoid 与 Softmax 区别
 image: /python.jpg
 showCoverInPost: false
 tags: [python, 激活函数]
-category: Python/数据知识
+category: Python/数学知识
 draft: false
 ---
 

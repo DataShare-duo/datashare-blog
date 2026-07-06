@@ -1,12 +1,12 @@
 ---
 title: 利用Python枚举所有的排列情况
-slug: 数据知识/利用Python枚举所有的排列情况
+slug: 数学知识/利用Python枚举所有的排列情况
 published: 2020-06-08
 description: Python 枚举排列
 image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库]
-category: Python/数据知识
+category: Python/数学知识
 draft: false
 ---
 

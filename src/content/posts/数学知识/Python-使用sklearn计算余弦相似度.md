@@ -1,12 +1,12 @@
 ---
 title: Python 使用sklearn计算余弦相似度
-slug: 数据知识/Python-使用sklearn计算余弦相似度
+slug: 数学知识/Python-使用sklearn计算余弦相似度
 published: 2020-09-14
 description: Python 计算余弦相似度
 image: /python.jpg
 showCoverInPost: false
 tags: [python, 基础库, sklearn, 相似度]
-category: Python/数据知识
+category: Python/数学知识
 draft: false
 ---
 

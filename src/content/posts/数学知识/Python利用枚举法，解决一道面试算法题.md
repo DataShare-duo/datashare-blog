@@ -1,12 +1,12 @@
 ---
 title: Python利用枚举法，解决一道面试算法题
-slug: 数据知识/Python利用枚举法，解决一道面试算法题
+slug: 数学知识/Python利用枚举法，解决一道面试算法题
 published: 2020-06-14
 description: Python 枚举法
 image: /python.jpg
 showCoverInPost: false
 tags: [python, 算法]
-category: Python/数据知识
+category: Python/数学知识
 draft: false
 ---
 
