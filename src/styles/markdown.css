@@ -18,6 +18,16 @@
             }
         }
     }
+    
+    h2 {
+        margin-top: 35px!important;
+        color:#000000;
+        font-size: 1.2em  ;
+        text-decoration: underline;
+        text-decoration-color: rgb(228,94,40);   /* 即 #e45e28，与 H1 一致 */
+        text-underline-offset: 5px;             /* 下划线与文字的间距，按喜好调整 */
+        text-decoration-thickness: 2px;
+    }
 
     a:not(.no-styling) {
         @apply relative bg-none link font-medium text-[#1e6bb8]
