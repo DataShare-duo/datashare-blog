@@ -5,6 +5,6 @@ https://datashare-duo.github.io/datashare-blog
 
 <br/>
 
-- **原基于 mdbook 旧博客地址（不再维护）：**
+- **旧博客基于mdbook 地址（不再维护）：**
 https://datashare-duo.github.io/datashare
 
